@@ -1,0 +1,23 @@
+CREATE TABLE Task(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    title TEXT NOT NULL,
+    image BLOB,
+    description TEXT,
+    dueDate TEXT,
+    priority INTEGER NOT NULL,
+    status TEXT NOT NULL
+);
+
+
+selectAll:
+SELECT * FROM Task;
+
+selectByDueDate:
+SELECT * FROM Task WHERE dueDate = ?;
+
+selectByPriority:
+SELECT * FROM Task WHERE priority = ?;
+
+selectByStatus:
+SELECT * FROM Task WHERE status = ?;
